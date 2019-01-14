@@ -3,6 +3,7 @@ ENV DEBIAN_FRONTEND noninteractive
 USER root
 
 RUN echo "deb http://security.ubuntu.com/ubuntu bionic-security main universe" >> /etc/sources.list
+RUN add-apt-repository ppa:openjdk-r/ppa  
 RUN apt-get update
 RUN apt-get --fix-missing update
 
